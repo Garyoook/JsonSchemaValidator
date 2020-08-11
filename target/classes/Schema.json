@@ -37,10 +37,7 @@
         "modelsroot",
         "center",
         "floorZShift",
-        "focusRange",
-        "heading",
-        "resolution0",
-        "maxResolution"
+        "heading"
       ],
       "properties": {
         "name": {
@@ -64,7 +61,6 @@
               "region",
               "name",
               "alias",
-              "url",
               "type",
               "z",
               "zposition"
@@ -316,7 +312,6 @@
             "description": "An explanation about the purpose of this instance.",
             "default": {},
             "required": [
-              "class",
               "src",
               "icon",
               "name",
@@ -802,8 +797,6 @@
                 "ground",
                 "h",
                 "zShift",
-                "showResolution",
-                "wireframeLineW",
                 "data",
                 "rid",
                 "lid"

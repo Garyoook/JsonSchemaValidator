@@ -7,10 +7,10 @@ import org.json.JSONTokener;
 import java.io.InputStream;
 
 public class JsonValidator {
-	public static void validate() {
+	public static void validate(String input_path) {
 		boolean isViolated = false;
 		//这个就是你设定的标准JSON
-		InputStream inputStream = JsonValidator.class.getResourceAsStream("/Schema.json");
+		InputStream inputStream = JsonValidator.class.getResourceAsStream(input_path);
 		//这个是你打算验证的JSON，这里我也用一份文件来存放，你也可以使用string或者jsonObject
 		InputStream inputStream1 = JsonValidator.class.getResourceAsStream("/failure.json");
 		JSONObject Schema = new JSONObject(new JSONTokener(inputStream));
@@ -37,6 +37,10 @@ public class JsonValidator {
 
 
   public static void main(String[] args) {
-		validate();
+		do {
+      System.out.println("please give the correct path to the target Json file！");
+		} while (args.length != 1);
+	  validate(args[0]);
+
   }
 }
